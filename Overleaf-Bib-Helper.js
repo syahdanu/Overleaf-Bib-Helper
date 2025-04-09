@@ -69,8 +69,10 @@ function injectScript() {
                 queryArticle();
             }
         };
-        popupBox.onkeydown = (env) => {
-            if (env.key === 'Escape') {
+
+        // Global Esc key listener
+        document.onkeydown = (env) => {
+            if (env.key === 'Escape' && showBox) {
                 togglePopup(popupBox);
             }
         };
@@ -127,6 +129,9 @@ function injectScript() {
 function togglePopup(popupBox) {
     showBox = !showBox;
     popupBox.style.display = showBox ? 'block' : 'none';
+    if (showBox) {
+        document.querySelector('.search-input').focus(); // Optional: Focus input when popup opens
+    }
 }
 
 function queryArticle() {
