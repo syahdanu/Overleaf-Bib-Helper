@@ -74,6 +74,9 @@ Tampermonkey is a browser extension required to run UserScripts like Overleaf-Bi
    - **Safari**: [App Store](https://apps.apple.com/us/app/tampermonkey/id1482490089) (requires macOS)
 2. **Enable Tampermonkey**:
    - After installation, click the Tampermonkey icon in your browser’s toolbar and ensure it’s enabled.
+   - Note: 
+3. **Enable Developer Mode for the Extension**:
+   - For Chrome, go to the extensions page (`chrome://extensions/`) and enable Developer mode.
 
 ### Step 2: Install Overleaf-Bib-Helper
 You can install the script in one of two ways:
@@ -133,11 +136,13 @@ You can install the script in one of two ways:
 
 ## Troubleshooting
 - **Script Not Working?**
+  - Ensure your browser has developer mode enabled for extensions.
   - Ensure Tampermonkey is enabled and the script is active.
   - Verify you’re on an Overleaf project page.
   - Reload or reinstall from Greasy Fork.
 - **No Results?**
   - Check your query for typos.
+  - Ensure you have granted the plugin search permissions.
   - Try switching between DBLP and Google Scholar.
 - **Google Scholar Issues?**
   - If CAPTCHA blocks access, complete it in the opened tab and retry.

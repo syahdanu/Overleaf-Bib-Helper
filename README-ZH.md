@@ -71,6 +71,8 @@ Tampermonkey是一个运行Overleaf-Bib-Helper等用户脚本所需的浏览器�
    - **Safari**：[应用商店](https://apps.apple.com/us/app/tampermonkey/id1482490089)（需要macOS）
 2. **启用Tampermonkey**：
    - 安装完成后，点击浏览器工具栏中的Tampermonkey图标，确保其已启用。
+3. **启用插件的开发者模式**:
+   - 以Chrome为例，你需要在浏览器的扩展程序页面（`chrome://extensions/`）中启用开发者模式。
 
 ### 第二步：安装Overleaf-Bib-Helper
 您可以通过以下两种方式之一安装脚本：
@@ -130,11 +132,13 @@ Tampermonkey是一个运行Overleaf-Bib-Helper等用户脚本所需的浏览器�
 
 ## 故障排除
 - **脚本不起作用？**
+  - 确保浏览器已经对扩展启用了开发者模式。
   - 确保Tampermonkey已启用且脚本处于活动状态。
   - 确认您在Overleaf项目页面上。
   - 重新加载或从Greasy Fork重新安装。
 - **没有结果？**
   - 检查查询是否有拼写错误。
+  - 确保你对插件搜索权限进行了授权。
   - 尝试在DBLP和Google Scholar之间切换。
 - **Google Scholar问题？**
   - 如果验证码阻止访问，请在打开的标签中完成验证并重试。
