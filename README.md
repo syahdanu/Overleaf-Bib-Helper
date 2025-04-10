@@ -1,9 +1,60 @@
-# Overleaf-Bib-Helper
+<div align="center">
+  <img src="figure/logo.png" width="50" />
+  <h1>Overleaf-Bib-Helper</h1>
+</div>
 
-A UserScript to enhance Overleaf by integrating article search and BibTeX retrieval from DBLP and Google Scholar directly within the Overleaf editor.
+<p align="center">
+  A UserScript to enhance Overleaf by allowing article searches and BibTeX retrieval from DBLP and Google Scholar directly within the Overleaf editor.
+</p>
 
-- **GitHub Repository**: [https://github.com/Arvid-pku/Overleaf-Bib-Helper](https://github.com/Arvid-pku/Overleaf-Bib-Helper)
-- **Greasy Fork Page**: [https://greasyfork.org/zh-CN/scripts/532304-overleaf-bib-helper](https://greasyfork.org/zh-CN/scripts/532304-overleaf-bib-helper)
+<p align="center">
+  <a href="https://greasyfork.org/zh-CN/scripts/532304-overleaf-bib-helper">
+    <img alt="Install from Greasy Fork" src="https://img.shields.io/badge/Install-Greasy_Fork-blue" />
+  </a>
+  <a href="https://github.com/Arvid-pku/Overleaf-Bib-Helper/releases">
+    <img alt="Version" src="https://img.shields.io/badge/Version-1.1-blue" />
+  </a>
+  <a href="https://github.com/Arvid-pku/Overleaf-Bib-Helper/blob/main/LICENSE.md">
+    <img alt="License" src="https://img.shields.io/badge/License-MIT-blue" />
+  </a>
+  <a href="https://github.com/Arvid-pku/Overleaf-Bib-Helper/stargazers">
+    <img alt="Stars" src="https://img.shields.io/github/stars/Arvid-pku/Overleaf-Bib-Helper" />
+  </a>
+  <a href="https://github.com/Arvid-pku/Overleaf-Bib-Helper/network/members">
+    <img alt="Forks" src="https://img.shields.io/github/forks/Arvid-pku/Overleaf-Bib-Helper" />
+  </a>
+  <a href="https://github.com/Arvid-pku/Overleaf-Bib-Helper/issues">
+    <img alt="Issues" src="https://img.shields.io/github/issues/Arvid-pku/Overleaf-Bib-Helper" />
+  </a>
+  <a href="https://github.com/Arvid-pku/Overleaf-Bib-Helper/pulls">
+    <img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" />
+  </a>
+</p>
+
+---
+
+<div>
+<p align="center">
+      <a href="#Installation">Installation</a> •
+      <a href="#Usage">Usage</a> •
+      <a href="#Supported-Sources">Supported Sources</a> •
+      <a href="#Troubleshooting">Troubleshooting</a> •
+      <a href="#Disclaimer">Disclaimer</a> •
+      <a href="#Changelog">Changelog</a> •
+      <a href="#License">License</a> •
+      <a href="#Contributing">Contributing</a> •
+      <a href="#Contact">Contact</a> •
+      <a href="#Organizers">Organizers</a> •
+      <a href="#Contributors">Contributors</a> •
+      <a href="#Acknowledgments">Acknowledgments</a>
+    </p>
+</div>
+
+
+
+
+## Motivation
+Writing LaTeX documents often requires including numerous academic references. Manually searching for and formatting BibTeX entries can be time-consuming. Overleaf-Bib-Helper streamlines this process by integrating search functionality from DBLP and Google Scholar right into the Overleaf interface, allowing users to quickly find and copy BibTeX entries with minimal effort.
 
 ## Features
 - Search for academic articles from DBLP or Google Scholar within Overleaf.
@@ -14,16 +65,13 @@ A UserScript to enhance Overleaf by integrating article search and BibTeX retrie
 - Supports multiple Google Scholar mirrors for accessibility.
 
 ## Installation
-
 ### Step 1: Install Tampermonkey
 Tampermonkey is a browser extension required to run UserScripts like Overleaf-Bib-Helper. Follow these steps:
-
 1. **Download Tampermonkey**:
-   - **Chrome**: Install from the [Chrome Web Store](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo).
-   - **Firefox**: Install from [Mozilla Add-ons](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/).
-   - **Edge**: Install from the [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmleipfamncoeapigifbpdccjedebe).
-   - **Safari**: Install from the [App Store](https://apps.apple.com/us/app/tampermonkey/id1482490089) (requires macOS).
-
+   - **Chrome**: [Chrome Web Store](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+   - **Firefox**: [Mozilla Add-ons](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/)
+   - **Edge**: [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmleipfamncoeapigifbpdccjedebe)
+   - **Safari**: [App Store](https://apps.apple.com/us/app/tampermonkey/id1482490089) (requires macOS)
 2. **Enable Tampermonkey**:
    - After installation, click the Tampermonkey icon in your browser’s toolbar and ensure it’s enabled.
 
@@ -35,6 +83,7 @@ You can install the script in one of two ways:
 2. Click the **"Install this script"** button.
 3. Tampermonkey will open a confirmation window. Click **"Install"** to add the script.
 4. The script will automatically activate on Overleaf project pages (`https://www.overleaf.com/project/*`).
+5. To keep the script updated, enable auto-updates in Tampermonkey settings.
 
 #### Option 2: Install from GitHub
 1. Go to the [GitHub repository](https://github.com/Arvid-pku/Overleaf-Bib-Helper).
@@ -44,51 +93,76 @@ You can install the script in one of two ways:
 5. Paste the copied code into the editor, replacing the default template.
 6. Click **File > Save** in the Tampermonkey editor.
 7. The script will be active on Overleaf project pages.
+8. **Note:** For manual installations from GitHub, please check the repository periodically for updates and reinstall as needed.
 
 ## Usage
-
 ### Opening the Tool
 1. Open an Overleaf project in your browser (`https://www.overleaf.com/project/*`).
 2. Look for a new icon in the Overleaf toolbar (a small document-like icon).
 3. Click the icon to open the search popup.
 
+<div align="center">
+<img src="figure/instruction.jpg" width="180" />
+</div>
+
 ### Searching for Articles
 1. **Enter a Query**: Type your search term (e.g., article title, author, or keywords) into the input field.
 2. **Select Source**: Choose "DBLP" or "Google Scholar" from the "Source" dropdown.
+   - **DBLP**: Best for computer science literature with structured data.
+   - **Google Scholar**: Broader coverage across various fields but may require CAPTCHA verification.
 3. **Set Result Count**: Select 5, 10, 20, or 50 results from the "Results" dropdown.
 4. **Start Search**:
-   - Press the **Enter** key, or
-   - Click the magnifying glass icon next to the input field.
-5. Results will appear in a scrollable list below the input field. Scroll to browse if there are more results than fit in the popup.
+   - Press the **Enter** key or click the magnifying glass icon.
+5. Results will appear in a scrollable list below the input field.
 
 ### Copying BibTeX
 1. Click on any result in the list (e.g., "Title@Author").
 2. The BibTeX entry will be copied to your clipboard.
 3. A notification will confirm success ("Copy successfully") or report an error ("Copy failed").
 
+<div align="center">
+<img src="figure/result.png" width="280" />
+</div>
+
 ### Closing the Popup
-- Press the **Esc** key anywhere on the page while the popup is open, or
-- Click the toolbar icon again to toggle the popup closed.
+- Press **Esc** or click the toolbar icon again.
 
-## Keyboard Shortcuts
-- **Enter**: Trigger a search from the input field.
-- **Esc**: Close the popup from anywhere on the page.
-
-## Notes
-- **Google Scholar**: May occasionally require CAPTCHA verification. If BibTeX retrieval fails, the script will open a Google Scholar tab for manual intervention.
-- **Preferences**: Your selected source and result count are saved between sessions.
-- **Compatibility**: Works on Overleaf project pages only. Ensure you’re on a project URL (`https://www.overleaf.com/project/*`).
+## Supported Sources
+- **DBLP**: A comprehensive computer science bibliography providing reliable BibTeX entries.
+- **Google Scholar**: A broader academic search engine that may include more recent or interdisciplinary works but might require user verification (e.g., CAPTCHA).
 
 ## Troubleshooting
 - **Script Not Working?**
-  - Ensure Tampermonkey is enabled and the script is active (check Tampermonkey dashboard).
+  - Ensure Tampermonkey is enabled and the script is active.
   - Verify you’re on an Overleaf project page.
-  - Reload the page or reinstall the script from Greasy Fork.
+  - Reload or reinstall from Greasy Fork.
 - **No Results?**
-  - Check your search query for typos.
-  - Try switching between DBLP and Google Scholar, as coverage differs.
-- **Issues with Google Scholar?**
+  - Check your query for typos.
+  - Try switching between DBLP and Google Scholar.
+- **Google Scholar Issues?**
   - If CAPTCHA blocks access, complete it in the opened tab and retry.
 
+## Disclaimer
+While Overleaf-Bib-Helper aims to provide a seamless experience, please note that it relies on external services (DBLP and Google Scholar) which may change their APIs or require user verification (e.g., CAPTCHA). Use this tool at your own discretion and always verify retrieved BibTeX entries before including them in your documents.
+
+## Changelog
+- **2025-04-09**: Initial release with basic functionality for DBLP and Google Scholar (v1.1).
+
+## License
+This project is licensed under the MIT License - see [LICENSE.md](https://github.com/Arvid-pku/Overleaf-Bib-Helper/blob/main/LICENSE.md) for details.
+
 ## Contributing
-Feel free to fork the [GitHub repository](https://github.com/Arvid-pku/Overleaf-Bib-Helper), submit issues, or create pull requests with improvements!
+Feel free to fork the [GitHub repository](https://github.com/Arvid-pku/Overleaf-Bib-Helper), submit issues, or create pull requests with improvements! 
+
+## Contact
+Please email [Xunjian Yin](mailto:xjyin@pku.edu.cn) or create Github issues here if you have any questions or suggestions. 
+
+## Organizers
+<a href="https://github.com/Arvid-pku">  <img src="https://avatars.githubusercontent.com/u/53811705?s=96&v=4"  width="65" > </a> 
+
+## Contributors
+<a href="https://github.com/Arvid-pku">  <img src="https://avatars.githubusercontent.com/u/53811705?s=96&v=4"  width="65" > </a> 
+
+## Acknowledgments
+Inspired by similar tools and the academic community’s need for efficient reference management.
+
