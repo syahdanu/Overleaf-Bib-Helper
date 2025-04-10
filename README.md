@@ -11,22 +11,22 @@
   <a href="https://greasyfork.org/zh-CN/scripts/532304-overleaf-bib-helper">
     <img alt="Install from Greasy Fork" src="https://img.shields.io/badge/Install-Greasy_Fork-blue" />
   </a>
-  <a href="https://github.com/Arvid-pku/Overleaf-Bib-Helper/releases">
+  <a href="https://github.com/MLNLP-World/Overleaf-Bib-Helper/releases">
     <img alt="Version" src="https://img.shields.io/badge/Version-1.1-blue" />
   </a>
-  <a href="https://github.com/Arvid-pku/Overleaf-Bib-Helper/blob/main/LICENSE.md">
+  <a href="https://github.com/MLNLP-World/Overleaf-Bib-Helper/blob/main/LICENSE.md">
     <img alt="License" src="https://img.shields.io/badge/License-MIT-blue" />
   </a>
-  <a href="https://github.com/Arvid-pku/Overleaf-Bib-Helper/stargazers">
+  <a href="https://github.com/MLNLP-World/Overleaf-Bib-Helper/stargazers">
     <img alt="Stars" src="https://img.shields.io/github/stars/Arvid-pku/Overleaf-Bib-Helper" />
   </a>
-  <a href="https://github.com/Arvid-pku/Overleaf-Bib-Helper/network/members">
+  <a href="https://github.com/MLNLP-World/Overleaf-Bib-Helper/network/members">
     <img alt="Forks" src="https://img.shields.io/github/forks/Arvid-pku/Overleaf-Bib-Helper" />
   </a>
-  <a href="https://github.com/Arvid-pku/Overleaf-Bib-Helper/issues">
+  <a href="https://github.com/MLNLP-World/Overleaf-Bib-Helper/issues">
     <img alt="Issues" src="https://img.shields.io/github/issues/Arvid-pku/Overleaf-Bib-Helper" />
   </a>
-  <a href="https://github.com/Arvid-pku/Overleaf-Bib-Helper/pulls">
+  <a href="https://github.com/MLNLP-World/Overleaf-Bib-Helper/pulls">
     <img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" />
   </a>
 </p>
@@ -89,7 +89,7 @@ You can install the script in one of two ways:
 5. To keep the script updated, enable auto-updates in Tampermonkey settings.
 
 #### Option 2: Install from GitHub
-1. Go to the [GitHub repository](https://github.com/Arvid-pku/Overleaf-Bib-Helper).
+1. Go to the [GitHub repository](https://github.com/MLNLP-World/Overleaf-Bib-Helper).
 2. Open the `Overleaf-Bib-Helper.js` file in the repository.
 3. Copy the entire script content.
 4. In your browser, click the Tampermonkey icon > **"Create a new script"**.
@@ -154,10 +154,10 @@ While Overleaf-Bib-Helper aims to provide a seamless experience, please note tha
 - **2025-04-09**: Initial release with basic functionality for DBLP and Google Scholar (v1.1).
 
 ## License
-This project is licensed under the MIT License - see [LICENSE.md](https://github.com/Arvid-pku/Overleaf-Bib-Helper/blob/main/LICENSE.md) for details.
+This project is licensed under the MIT License - see [LICENSE.md](https://github.com/MLNLP-World/Overleaf-Bib-Helper/blob/main/LICENSE.md) for details.
 
 ## Contributing
-Feel free to fork the [GitHub repository](https://github.com/Arvid-pku/Overleaf-Bib-Helper), submit issues, or create pull requests with improvements! 
+Feel free to fork the [GitHub repository](https://github.com/MLNLP-World/Overleaf-Bib-Helper), submit issues, or create pull requests with improvements! 
 
 ## Contact
 Please email [Xunjian Yin](mailto:xjyin@pku.edu.cn) or create Github issues here if you have any questions or suggestions. 
