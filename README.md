@@ -136,7 +136,7 @@ You can install the script in one of two ways:
 
 ## Troubleshooting
 - **Script Not Working?**
-  - Ensure your browser has developer mode enabled for extensions.
+  - Ensure your browser has **developer mode** enabled for extensions.
   - Ensure Tampermonkey is enabled and the script is active.
   - Verify you’re on an Overleaf project page.
   - Reload or reinstall from Greasy Fork.
