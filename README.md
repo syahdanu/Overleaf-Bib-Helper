@@ -18,13 +18,13 @@
     <img alt="License" src="https://img.shields.io/badge/License-MIT-blue" />
   </a>
   <a href="https://github.com/MLNLP-World/Overleaf-Bib-Helper/stargazers">
-    <img alt="Stars" src="https://img.shields.io/github/stars/Arvid-pku/Overleaf-Bib-Helper" />
+    <img alt="Stars" src="https://img.shields.io/github/stars/MLNLP-World/Overleaf-Bib-Helper" />
   </a>
   <a href="https://github.com/MLNLP-World/Overleaf-Bib-Helper/network/members">
-    <img alt="Forks" src="https://img.shields.io/github/forks/Arvid-pku/Overleaf-Bib-Helper" />
+    <img alt="Forks" src="https://img.shields.io/github/forks/MLNLP-World/Overleaf-Bib-Helper" />
   </a>
   <a href="https://github.com/MLNLP-World/Overleaf-Bib-Helper/issues">
-    <img alt="Issues" src="https://img.shields.io/github/issues/Arvid-pku/Overleaf-Bib-Helper" />
+    <img alt="Issues" src="https://img.shields.io/github/issues/MLNLP-World/Overleaf-Bib-Helper" />
   </a>
   <a href="https://github.com/MLNLP-World/Overleaf-Bib-Helper/pulls">
     <img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" />
