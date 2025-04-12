@@ -12,7 +12,7 @@
     <img alt="Install from Greasy Fork" src="https://img.shields.io/badge/Install-Greasy_Fork-blue" />
   </a>
   <a href="https://github.com/MLNLP-World/Overleaf-Bib-Helper/releases">
-    <img alt="Version" src="https://img.shields.io/badge/Version-1.1-blue" />
+    <img alt="Version" src="https://img.shields.io/badge/Version-1.2-blue" />
   </a>
   <a href="https://github.com/MLNLP-World/Overleaf-Bib-Helper/blob/main/LICENSE.md">
     <img alt="License" src="https://img.shields.io/badge/License-MIT-blue" />
@@ -35,6 +35,7 @@
 
 <div>
 <p align="center">
+      <a href="README-ZH.md">中文文档</a> •
       <a href="#Installation">Installation</a> •
       <a href="#Usage">Usage</a> •
       <a href="#Supported-Sources">Supported Sources</a> •
@@ -70,7 +71,7 @@ Tampermonkey is a browser extension required to run UserScripts like Overleaf-Bi
 1. **Download Tampermonkey**:
    - **Chrome**: [Chrome Web Store](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
    - **Firefox**: [Mozilla Add-ons](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/)
-   - **Edge**: [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmleipfamncoeapigifbpdccjedebe)
+   - **Edge**: [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/iikmkjmpaadaobahmlepeloendndfphd)
    - **Safari**: [App Store](https://apps.apple.com/us/app/tampermonkey/id1482490089) (requires macOS)
 2. **Enable Tampermonkey**:
    - After installation, click the Tampermonkey icon in your browser’s toolbar and ensure it’s enabled.
@@ -151,6 +152,7 @@ You can install the script in one of two ways:
 While Overleaf-Bib-Helper aims to provide a seamless experience, please note that it relies on external services (DBLP and Google Scholar) which may change their APIs or require user verification (e.g., CAPTCHA). Use this tool at your own discretion and always verify retrieved BibTeX entries before including them in your documents.
 
 ## Changelog
+- **2025-04-10**: Added support for cn.overleaf.com and cn.overleaf.com domains (v1.2).
 - **2025-04-09**: Initial release with basic functionality for DBLP and Google Scholar (v1.1).
 
 ## License
@@ -163,10 +165,10 @@ Feel free to fork the [GitHub repository](https://github.com/MLNLP-World/Overlea
 Please email [Xunjian Yin](mailto:xjyin@pku.edu.cn) or create Github issues here if you have any questions or suggestions. 
 
 ## Organizers
-<a href="https://github.com/Arvid-pku">  <img src="https://avatars.githubusercontent.com/u/53811705?s=96&v=4"  width="65" > </a> 
+<a href="https://github.com/Arvid-pku">  <img src="https://avatars.githubusercontent.com/u/53811705?s=96&v=4"  width="55" > </a> 
 
 ## Contributors
-<a href="https://github.com/Arvid-pku">  <img src="https://avatars.githubusercontent.com/u/53811705?s=96&v=4"  width="65" > </a> 
+<a href="https://github.com/Arvid-pku">  <img src="https://avatars.githubusercontent.com/u/53811705?s=96&v=4"  width="55" > </a> 
 
 ## Acknowledgments
 Inspired by similar tools and the academic community’s need for efficient reference management.

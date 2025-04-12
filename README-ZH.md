@@ -11,22 +11,22 @@
   <a href="https://greasyfork.org/zh-CN/scripts/532304-overleaf-bib-helper">
     <img alt="从Greasy Fork安装" src="https://img.shields.io/badge/Install-Greasy_Fork-blue" />
   </a>
-  <a href="https://github.com/Arvid-pku/Overleaf-Bib-Helper/releases">
-    <img alt="版本" src="https://img.shields.io/badge/Version-1.1-blue" />
+  <a href="https://github.com/MLNLP-World/Overleaf-Bib-Helper/releases">
+    <img alt="版本" src="https://img.shields.io/badge/Version-1.2-blue" />
   </a>
-  <a href="https://github.com/Arvid-pku/Overleaf-Bib-Helper/blob/main/LICENSE.md">
+  <a href="https://github.com/MLNLP-World/Overleaf-Bib-Helper/blob/main/LICENSE.md">
     <img alt="许可证" src="https://img.shields.io/badge/License-MIT-blue" />
   </a>
-  <a href="https://github.com/Arvid-pku/Overleaf-Bib-Helper/stargazers">
-    <img alt="星标" src="https://img.shields.io/github/stars/Arvid-pku/Overleaf-Bib-Helper" />
+  <a href="https://github.com/MLNLP-World/Overleaf-Bib-Helper/stargazers">
+    <img alt="星标" src="https://img.shields.io/github/stars/MLNLP-World/Overleaf-Bib-Helper" />
   </a>
-  <a href="https://github.com/Arvid-pku/Overleaf-Bib-Helper/network/members">
-    <img alt="分叉" src="https://img.shields.io/github/forks/Arvid-pku/Overleaf-Bib-Helper" />
+  <a href="https://github.com/MLNLP-World/Overleaf-Bib-Helper/network/members">
+    <img alt="分叉" src="https://img.shields.io/github/forks/MLNLP-World/Overleaf-Bib-Helper" />
   </a>
-  <a href="https://github.com/Arvid-pku/Overleaf-Bib-Helper/issues">
-    <img alt="问题" src="https://img.shields.io/github/issues/Arvid-pku/Overleaf-Bib-Helper" />
+  <a href="https://github.com/MLNLP-World/Overleaf-Bib-Helper/issues">
+    <img alt="问题" src="https://img.shields.io/github/issues/MLNLP-World/Overleaf-Bib-Helper" />
   </a>
-  <a href="https://github.com/Arvid-pku/Overleaf-Bib-Helper/pulls">
+  <a href="https://github.com/MLNLP-World/Overleaf-Bib-Helper/pulls">
     <img alt="欢迎PR" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" />
   </a>
 </p>
@@ -67,7 +67,7 @@ Tampermonkey是一个运行Overleaf-Bib-Helper等用户脚本所需的浏览器�
 1. **下载Tampermonkey**：
    - **Chrome**：[Chrome网上商店](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
    - **Firefox**：[Mozilla插件](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/)
-   - **Edge**：[Microsoft Edge插件](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmleipfamncoeapigifbpdccjedebe)
+   - **Edge**：[Microsoft Edge插件](https://microsoftedge.microsoft.com/addons/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/iikmkjmpaadaobahmlepeloendndfphd)
    - **Safari**：[应用商店](https://apps.apple.com/us/app/tampermonkey/id1482490089)（需要macOS）
 2. **启用Tampermonkey**：
    - 安装完成后，点击浏览器工具栏中的Tampermonkey图标，确保其已启用。
@@ -85,7 +85,7 @@ Tampermonkey是一个运行Overleaf-Bib-Helper等用户脚本所需的浏览器�
 5. 为保持脚本更新，请在Tampermonkey设置中启用自动更新。
 
 #### 选项2：从GitHub安装
-1. 前往[GitHub仓库](https://github.com/Arvid-pku/Overleaf-Bib-Helper)。
+1. 前往[GitHub仓库](https://github.com/MLNLP-World/Overleaf-Bib-Helper)。
 2. 打开仓库中的`Overleaf-Bib-Helper.js`文件。
 3. 复制整个脚本内容。
 4. 在浏览器中，点击Tampermonkey图标 > **“创建新脚本”**。
@@ -147,22 +147,23 @@ Tampermonkey是一个运行Overleaf-Bib-Helper等用户脚本所需的浏览器�
 虽然Overleaf-Bib-Helper旨在提供无缝体验，但请注意，它依赖于外部服务（DBLP和Google Scholar），这些服务的API可能会更改或需要用户验证（例如验证码）。请自行决定使用此工具，并始终在将检索到的BibTeX条目纳入文档前进行验证。
 
 ## 更新日志
+- **2025-04-10**：增加了对 cn.overleaf.com 和 cn.overleaf.com 域的支持（v1.2）。
 - **2025-04-09**：初始版本，支持DBLP和Google Scholar的基本功能（v1.1）。
 
 ## 许可证
-此项目采用MIT许可证 - 详情见[LICENSE.md](https://github.com/Arvid-pku/Overleaf-Bib-Helper/blob/main/LICENSE.md)。
+此项目采用MIT许可证 - 详情见[LICENSE.md](https://github.com/MLNLP-World/Overleaf-Bib-Helper/blob/main/LICENSE.md)。
 
 ## 贡献
-欢迎分叉[GitHub仓库](https://github.com/Arvid-pku/Overleaf-Bib-Helper)，提交问题或创建改进的拉取请求！
+欢迎分叉[GitHub仓库](https://github.com/MLNLP-World/Overleaf-Bib-Helper)，提交问题或创建改进的拉取请求！
 
 ## 联系方式
 如有任何问题或建议，请发送电子邮件至[Xunjian Yin](mailto:xjyin@pku.edu.cn)或在此处创建Github问题。
 
 ## 组织者
-<a href="https://github.com/Arvid-pku">  <img src="https://avatars.githubusercontent.com/u/53811705?s=96&v=4"  width="65" > </a>
+<a href="https://github.com/Arvid-pku">  <img src="https://avatars.githubusercontent.com/u/53811705?s=96&v=4"  width="55" > </a>
 
 ## 贡献者
-<a href="https://github.com/Arvid-pku">  <img src="https://avatars.githubusercontent.com/u/53811705?s=96&v=4"  width="65" > </a>
+<a href="https://github.com/Arvid-pku">  <img src="https://avatars.githubusercontent.com/u/53811705?s=96&v=4"  width="55" > </a>
 
 ## 致谢
 灵感来源于类似工具和学术界对高效参考管理的需要。

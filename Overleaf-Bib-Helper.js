@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         Overleaf-Bib-Helper
 // @namespace    com.Xunjian.overleaf
-// @version      1.1
+// @version      1.2
 // @description  Enhances Overleaf by allowing article searches and BibTeX retrieval from DBLP and Google Scholar
 // @author       Xunjian Yin
 // @match        https://www.overleaf.com/project/*
+// @match        https://cn.overleaf.com/project*
 // @match        https://latex.pku.edu.cn/project/*
 // @icon         https://www.overleaf.com/favicon.ico
 // @require      https://cdn.jsdelivr.net/npm/@floating-ui/core@1.6.8
