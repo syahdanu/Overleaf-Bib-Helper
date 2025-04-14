@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Overleaf-Bib-Helper
 // @namespace    com.Xunjian.overleaf
-// @version      1.2
+// @version      1.3
 // @description  Enhances Overleaf by allowing article searches and BibTeX retrieval from DBLP and Google Scholar
 // @author       Xunjian Yin
 // @match        https://www.overleaf.com/project/*
@@ -166,7 +166,10 @@ function queryArticle() {
             });
         });
     } else if (source === "GoogleScholar") {
-        getArticleIDListGoogleScholar(word, resultCount).then(lists => {
+        let yearFrom = document.getElementById("yearFrom").value;
+        let yearTo = document.getElementById("yearTo").value;
+        let sortBy = document.getElementById("sortBy").value;
+        getArticleIDListGoogleScholar(word, resultCount, yearFrom, yearTo, sortBy).then(lists => {
             if (lists.length === 0) {
                 content.innerHTML = "No articles found.";
                 throw new Error("No articles found");
@@ -221,41 +224,136 @@ function createBox() {
     box.id = "popup";
     box.style = 'width:300px;background:#eef;padding:10px;border:1px solid #ccc;border-radius:5px;position:absolute;display:none;top:0px;left:0px';
     box.innerHTML = `
-        <style>
-            .scholar-data:hover { background:#eee; }
-            .scholar-data { border-bottom:1px solid #ccc; cursor:pointer; font-size:12px; padding:5px; }
-            input.search-input:hover { outline:none; }
-            select, button { padding: 8px; margin: 5px; border-radius: 4px; border: 1px solid #ccc; }
-            .popup { font-family: Arial, sans-serif; }
-            #search-content { max-height: 300px; overflow-y: auto; margin-top: 10px; }
-        </style>
-        <div id="search" style="display:flex;">
-            <input class="search-input" style="height:22px;flex-grow:1;"></input>
-            <div class="search-icon" id="search-word" style="display:flex;justify-content:center;align-items:center;margin-left:5px;outline:none">
+    <style>
+        .popup-form {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .popup-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom:8px;
+        }
+        .popup-row label {
+            min-width: 50px;
+            font-size: 12px;
+            color: #444;
+        }
+        .popup-row input,
+        .popup-row select {
+            padding: 4px 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 12px;
+            background-color: #fff;
+        }
+        .search-input {
+            flex: 1;
+            padding: 6px 8px;
+            border: 1.5px solid #aaa;
+            border-radius: 6px;
+            font-size: 13px;
+            margin-right: 5px;
+        }
+        .search-icon {
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .search-icon:hover {
+            background: #dbeafe;
+        }
+        #search-content {
+            max-height: 260px;
+            overflow-y: auto;
+            margin-top: 8px;
+            background: #fff;
+            border-radius: 5px;
+            border: 1px solid #eee;
+            padding: 4px;
+            font-size: 12px;
+        }
+        .scholar-data {
+            border-bottom: 1px solid #e5e7eb;
+            cursor: pointer;
+            font-size: 12px;
+            padding: 6px 4px;
+            transition: background 0.1s;
+        }
+        .scholar-data:hover {
+            background: #e0e7ff;
+        }
+        .scholar-data:last-child {
+            border-bottom: none;
+        }
+        #gs-options {
+            display: none;
+        }
+    </style>
+    <div class="popup-form">
+        <div class="popup-row">
+            <input class="search-input" placeholder="Search..." />
+            <div class="search-icon" id="search-word">
                 <svg width="16" height="16" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
             </div>
         </div>
-        <label for="source">Source: </label>
-        <select id="source">
-            <option value="DBLP">DBLP</option>
-            <option value="GoogleScholar">Google Scholar</option>
-        </select>
-        <label for="resultCount">Results: </label>
-        <select id="resultCount">
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="50">50</option>
-        </select>
+        <div class="popup-row">
+            <label for="source">Source:</label>
+            <select id="source" style="flex: 1">
+                <option value="DBLP">DBLP</option>
+                <option value="GoogleScholar">Google Scholar</option>
+            </select>
+        </div>
+        <div class="popup-row">
+            <label for="resultCount">Results:</label>
+            <select id="resultCount">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+            </select>
+        </div>
+        <div id="gs-options">
+            <div class="popup-row">
+                <label for="sortBy">Sort by:</label>
+                <select id="sortBy" style="flex: 1">
+                    <option value="relevance">Relevance</option>
+                    <option value="date">Date</option>
+                </select>
+            </div>
+            <div class="popup-row">
+                <label for="yearFrom">Year:</label>
+                <input id="yearFrom" type="text" placeholder="From" style="width:60px">
+                <span style="margin:0 2px">-</span>
+                <input id="yearTo" type="text" placeholder="To" style="width:60px">
+            </div>
+        </div>
         <div id="search-content"></div>
-    `;
+    </div>
+`;
+
 
     let sourceSelect = box.querySelector("#source");
     let countSelect = box.querySelector("#resultCount");
+    let gsOptions = box.querySelector("#gs-options");
+
     sourceSelect.value = GM_getValue("searchSource", "DBLP");
     countSelect.value = GM_getValue("resultCount", "5");
+    // Show/hide Google Scholar options based on source selection
+    if (sourceSelect.value === "GoogleScholar") {
+        gsOptions.style.display = "block";
+    }
 
-    sourceSelect.addEventListener("change", () => GM_setValue("searchSource", sourceSelect.value));
+    sourceSelect.addEventListener("change", () => {
+        GM_setValue("searchSource", sourceSelect.value);
+        // Show/hide Google Scholar options
+        gsOptions.style.display = sourceSelect.value === "GoogleScholar" ? "block" : "none";
+    });
+
     countSelect.addEventListener("change", () => GM_setValue("resultCount", countSelect.value));
 
     return box;
@@ -330,13 +428,21 @@ const mergedArray = [...new Set([...origins, ...oldOrigins])];
 GM_setValue("origins", mergedArray);
 let currentOrigin = () => GM_getValue("configure.origin", "https://scholar.google.com.hk");
 
-let scholarURL = query => `${currentOrigin()}/scholar?hl=zh-CN5&q=${query}&oq=a`;
+function scholarURL(query, yearFrom, yearTo, sortBy) {
+    let base = `${currentOrigin()}/scholar?hl=zh-CN&q=${encodeURIComponent(query)}&oq=a`;
+    if (yearFrom) base += `&as_ylo=${yearFrom}`;
+    if (yearTo) base += `&as_yhi=${yearTo}`;
+    if (sortBy === 'date') base += `&scisbd=1`;
+    return base;
+}
+
+//let scholarURL = query => `${currentOrigin()}/scholar?hl=zh-CN5&q=${query}&oq=a`;
 let scholarRefPageURL = id => `${currentOrigin()}/scholar?q=info:${id}:scholar.google.com/&output=cite&scirp=1&hl=zh-CN`;
 
-function getArticleIDListGoogleScholar(query, resultCount) {
+function getArticleIDListGoogleScholar(query, resultCount, yearFrom, yearTo, sortBy) {
     return new Promise((resolve, reject) => {
         GM_xmlhttpRequest({
-            url: scholarURL(query),
+            url: scholarURL(query, yearFrom, yearTo, sortBy),
             method: "GET",
             onload: response => {
                 let parser = new DOMParser();
