@@ -12,7 +12,7 @@
     <img alt="从 Greasy Fork 安装" src="https://img.shields.io/badge/Install-Greasy_Fork-blue" />
   </a>
   <a href="https://github.com/MLNLP-World/Overleaf-Bib-Helper/releases">
-    <img alt="版本" src="https://img.shields.io/badge/Version-1.2-blue" />
+    <img alt="版本" src="https://img.shields.io/badge/Version-1.3-blue" />
   </a>
   <a href="https://github.com/MLNLP-World/Overleaf-Bib-Helper/blob/main/LICENSE.md">
     <img alt="许可证" src="https://img.shields.io/badge/License-MIT-blue" />
