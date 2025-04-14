@@ -65,6 +65,12 @@ Writing LaTeX documents often requires including numerous academic references. M
 - Keyboard shortcuts: Enter to search, Esc to close the popup.
 - Supports multiple Google Scholar mirrors for accessibility.
 
+## Changelog
+- **2025-04-14**: Added support for advanced search options in Google Scholar (v1.3).
+- **2025-04-10**: Added support for cn.overleaf.com and cn.overleaf.com domains (v1.2).
+- **2025-04-09**: Initial release with basic functionality for DBLP and Google Scholar (v1.1).
+
+
 ## Installation
 ### Step 1: Install Tampermonkey
 Tampermonkey is a browser extension required to run UserScripts like Overleaf-Bib-Helper. Follow these steps:
@@ -151,9 +157,6 @@ You can install the script in one of two ways:
 ## Disclaimer
 While Overleaf-Bib-Helper aims to provide a seamless experience, please note that it relies on external services (DBLP and Google Scholar) which may change their APIs or require user verification (e.g., CAPTCHA). Use this tool at your own discretion and always verify retrieved BibTeX entries before including them in your documents.
 
-## Changelog
-- **2025-04-10**: Added support for cn.overleaf.com and cn.overleaf.com domains (v1.2).
-- **2025-04-09**: Initial release with basic functionality for DBLP and Google Scholar (v1.1).
 
 ## License
 This project is licensed under the MIT License - see [LICENSE.md](https://github.com/MLNLP-World/Overleaf-Bib-Helper/blob/main/LICENSE.md) for details.
@@ -169,6 +172,8 @@ Please email [Xunjian Yin](mailto:xjyin@pku.edu.cn) or create Github issues here
 
 ## Contributors
 <a href="https://github.com/Arvid-pku">  <img src="https://avatars.githubusercontent.com/u/53811705?s=96&v=4"  width="55" > </a> 
+<a href="https://github.com/QAbot-zh">  <img src="https://avatars.githubusercontent.com/u/40236765?v=4"  width="55" > </a> 
+
 
 ## Acknowledgments
 Inspired by similar tools and the academic community’s need for efficient reference management.
